@@ -1,53 +1,62 @@
 "use client"
 
 import Image from 'next/image'
-import Link from 'next/link'
-import { useLanguage } from '@/lib/language-context'
 
 export function HeroSection() {
-  const { t } = useLanguage()
-
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden tile-pattern">
-      {/* Decorative border */}
-      <div className="absolute inset-4 border-4 border-double border-primary/30 rounded-lg pointer-events-none" />
-      
-      <div className="relative z-10 max-w-6xl mx-auto px-4 py-16 text-center">
-        {/* Logo/Hero Image */}
-        <div className="mb-8 animate-fade-in-up">
-          <Image
-            src="/images/hero-banner.png"
-            alt="Nossa Casa Bakery - Mexican Tradition, Portuguese Roots"
-            width={600}
-            height={600}
-            className="mx-auto rounded-2xl shadow-2xl"
-            priority
-          />
+    <>
+      {/* Header with flags and logo */}
+      <header className="bg-white border-b border-gray-200 py-10">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="relative flex justify-center">
+            {/* Flag Background */}
+            <div className="absolute inset-0 flex justify-center items-center gap-10 opacity-20">
+              <div className="w-15 h-10 rounded" style={{background: 'linear-gradient(to right, green 33%, white 33%, white 66%, red 66%)'}} />
+              <div className="w-15 h-10 rounded" style={{background: 'linear-gradient(to right, blue 40%, white 40%)'}} />
+            </div>
+            
+            {/* Logo */}
+            <div className="relative z-10">
+              <Image
+                src="/images/logo.jpg"
+                alt="Nossa Casa Bakery Logo"
+                width={100}
+                height={100}
+                className="rounded-full"
+                priority
+              />
+            </div>
+          </div>
         </div>
+      </header>
 
-        {/* Tagline */}
-        <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <h1 className="text-3xl md:text-5xl font-bold text-foreground text-balance">
-            {t.hero.title}
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            {t.hero.subtitle}
-          </p>
+      {/* Hero Section with featured image */}
+      <section className="py-5 flex justify-center bg-gray-50">
+        <div className="max-w-4xl w-full px-4">
+          <div className="relative max-w-full border-none overflow-hidden rounded-2xl shadow-lg">
+            <Image
+              src="/images/best-picture.jpg"
+              alt="Featured Product"
+              width={900}
+              height={600}
+              className="w-full h-auto display-block"
+              priority
+            />
+            
+            {/* Blurry overlay logo */}
+            <div className="absolute top-5 right-5 w-20 opacity-70" style={{filter: 'blur(2px)'}}>
+              <Image
+                src="/images/logo.jpg"
+                alt="Overlay Logo"
+                width={80}
+                height={80}
+                className="rounded-full"
+              />
+            </div>
+          </div>
         </div>
-
-        {/* CTA Button */}
-        <div className="mt-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <Link
-            href="/menu"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-bold hover:opacity-90 transition-all hover:scale-105 shadow-lg"
-          >
-            {t.hero.cta}
-          </Link>
-        </div>
-
-        {/* Flags decoration */}
-        <div className="mt-12 flex justify-center gap-8 text-5xl animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <span className="hover:scale-110 transition-transform cursor-default">🇵🇹</span>
+      </section>
+    
           <span className="text-accent text-3xl">❤️</span>
           <span className="hover:scale-110 transition-transform cursor-default">🇲🇽</span>
         </div>

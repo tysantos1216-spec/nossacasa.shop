@@ -6,7 +6,6 @@ import { HeroSection } from '@/components/hero-section'
 import { AboutSection } from '@/components/about-section'
 import { HowItWorksSection } from '@/components/how-it-works-section'
 import { Footer } from '@/components/footer'
-import { BakeryLogo } from '@/components/bakery-logo'
 import PremiumMenu from '@/components/PremiumMenu'
 
 const jsonLd = {
@@ -35,7 +34,6 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <LanguagePicker />
-      <BakeryLogo />
       <main className="flex-1">
         <script
           type="application/ld+json"
