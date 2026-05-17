@@ -6,13 +6,40 @@ import { HeroSection } from '@/components/hero-section'
 import { AboutSection } from '@/components/about-section'
 import { HowItWorksSection } from '@/components/how-it-works-section'
 import { Footer } from '@/components/footer'
+import { BakeryLogo } from '@/components/bakery-logo'
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Bakery',
+  name: 'Nossa Casa Bakery',
+  image: 'https://nossacasa.store/logo.jpg',
+  description: 'Authentic home-style Portuguese & Mexican cottage bakery serving custom breads and pastries.',
+  url: 'https://nossacasa.store',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Cranston',
+    addressRegion: 'RI',
+    addressCountry: 'US',
+  },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Cranston' },
+    { '@type': 'AdministrativeArea', name: 'Providence' },
+    { '@type': 'AdministrativeArea', name: 'West Warwick' },
+  ],
+}
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <LanguagePicker />
+      <BakeryLogo />
       <main className="flex-1">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <HeroSection />
         <AboutSection />
         <section id="menu-preview" className="py-12 bg-background">

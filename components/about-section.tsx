@@ -1,11 +1,6 @@
 "use client"
 
-import Image from 'next/image'
-import { useLanguage } from '@/lib/language-context'
-
 export function AboutSection() {
-  const { t } = useLanguage()
-
   return (
     <section className="py-16 bg-card">
       <div className="max-w-4xl mx-auto px-4 text-center">
@@ -17,16 +12,16 @@ export function AboutSection() {
         </div>
 
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-          {t.about.title}
+          About Nossa Casa Bakery
         </h2>
 
         <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-          {t.about.description}
+          Welcome to Nossa Casa Bakery. We bake every loaf with love, combining tradition and local ingredients for a warm, welcoming experience.
         </p>
 
         {/* Small logo */}
         <div className="mt-8">
-          <Image
+          <img
             src="/images/logo.jpg"
             alt="Ty Santos & Natasha - Nossa Casa Bakery"
             width={120}
