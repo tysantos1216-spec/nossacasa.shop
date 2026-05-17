@@ -5,9 +5,9 @@ export default function Loading() {
         <img
           src="/images/logo.jpg"
           alt="Nossa Casa Bakery Logo"
-          className="preloader-logo"
+          className="preloader-logo-bold"
         />
-        <div className="loading-spinner" />
+        <div className="loading-spinner-premium" />
       </div>
     </div>
   )

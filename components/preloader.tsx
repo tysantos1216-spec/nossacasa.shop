@@ -7,20 +7,29 @@ export function Preloader() {
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    const hidePreloader = () => {
-      setIsFadingOut(true)
-      window.setTimeout(() => {
-        setIsVisible(false)
-      }, 600)
+    let fadeTimeout: number | undefined
+    let removeTimeout: number | undefined
+
+    const startPreloaderTimer = () => {
+      fadeTimeout = window.setTimeout(() => {
+        setIsFadingOut(true)
+        removeTimeout = window.setTimeout(() => {
+          setIsVisible(false)
+        }, 800)
+      }, 5000)
     }
 
     if (document.readyState === 'complete') {
-      hidePreloader()
-      return
+      startPreloaderTimer()
+    } else {
+      window.addEventListener('DOMContentLoaded', startPreloaderTimer)
     }
 
-    window.addEventListener('load', hidePreloader)
-    return () => window.removeEventListener('load', hidePreloader)
+    return () => {
+      window.removeEventListener('DOMContentLoaded', startPreloaderTimer)
+      if (fadeTimeout) window.clearTimeout(fadeTimeout)
+      if (removeTimeout) window.clearTimeout(removeTimeout)
+    }
   }, [])
 
   if (!isVisible) {
@@ -37,9 +46,9 @@ export function Preloader() {
         <img
           src="/images/logo.jpg"
           alt="Nossa Casa Bakery Logo"
-          className="preloader-logo"
+          className="preloader-logo-bold"
         />
-        <div className="loading-spinner" />
+        <div className="loading-spinner-premium" />
       </div>
     </div>
   )

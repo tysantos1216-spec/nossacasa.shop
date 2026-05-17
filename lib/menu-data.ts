@@ -238,12 +238,12 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: 'luso',
-    name: 'Luso Water',
-    namePt: 'Água Luso',
-    nameEs: 'Agua Luso',
-    description: 'Portuguese Mineral Water',
-    descriptionPt: 'Água Mineral Portuguesa',
-    descriptionEs: 'Agua Mineral Portuguesa',
+    name: 'apple juice',
+    namePt: 'sumo de maçã',
+    nameEs: 'manzana',
+    description: 'Portuguese apple juice ',
+    descriptionPt: 'Sumo de Maçã Português',
+    descriptionEs: 'Zumo de Manzana Portugués',
     price: 2.00,
     category: 'drinks',
     status: 'available'

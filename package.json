@@ -1,12 +1,15 @@
 {
-  "name": "my-project",
+  "name": "nossacasa-bakery",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "next lint",
+    "debug:build": "NODE_OPTIONS='--trace-warnings' next build",
+    "debug:dev": "NODE_OPTIONS='--trace-warnings' next dev"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
