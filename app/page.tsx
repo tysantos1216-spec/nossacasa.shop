@@ -7,6 +7,7 @@ import { AboutSection } from '@/components/about-section'
 import { HowItWorksSection } from '@/components/how-it-works-section'
 import { Footer } from '@/components/footer'
 import { BakeryLogo } from '@/components/bakery-logo'
+import PremiumMenu from '@/components/PremiumMenu'
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -42,6 +43,7 @@ export default function Home() {
         />
         <HeroSection />
         <AboutSection />
+        <PremiumMenu />
         <section id="menu-preview" className="py-12 bg-background">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-foreground mb-4">
