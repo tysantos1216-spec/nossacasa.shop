@@ -224,13 +224,15 @@ export const menuItems: MenuItem[] = [
   // Drinks
   {
     id: 'castello',
-    name: 'Castello Beer',
-    namePt: 'Cerveja Castello',
-    nameEs: 'Cerveza Castello',
-    description: 'Portuguese Beer',
-    descriptionPt: 'Cerveja Portuguesa',
-    descriptionEs: 'Cerveza Portuguesa',
-    price: 3.00,
+    name: 'Castello Mineral Water',
+    namePt: 'Água Mineral Castello',
+    nameEs: 'Agua Mineral Castello',
+    description: 'Portuguese Mineral Water',
+    descriptionPt: 'Água Mineral Portuguesa',
+    descriptionEs: 'Agua Mineral Portuguesa',
+    price: 2.00,
+    sixPackPrice: 6.00,
+    twelvePackPrice: 12.00,
     category: 'drinks',
     status: 'available'
   },

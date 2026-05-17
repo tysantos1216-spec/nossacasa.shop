@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Playfair_Display, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Providers } from '@/components/providers'
+import { Preloader } from '@/components/preloader'
 import './globals.css'
 
 const playfair = Playfair_Display({ 
@@ -17,13 +18,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Nossa Casa Bakery | Portuguese & Mexican Cottage Bakery RI',
-  description: 'Nossa Casa Bakery - Authentic Portuguese and Mexican sweet breads and pastries. Pre-order only. Serving Cranston, West Warwick, and all of Rhode Island. Malassadas, Conchas, Bolos Lêvedos, Pan Dulce.',
-  keywords: 'Portuguese bakery RI, Mexican pan dulce Cranston, Malassadas Rhode Island, Nossa Casa Bakery, Conchas West Warwick, Cottage Bakery RI, Portuguese pastries, Mexican bread Rhode Island',
+  title: 'Nossa Casa Bakery | Rhode Island Portuguese & Mexican Cottage Bakery',
+  description: 'Nossa Casa Bakery - Authentic Rhode Island bakery specializing in Portuguese and Mexican sweet breads and pastries. Pre-order only and delivering to Cranston, West Warwick, and across Rhode Island.',
+  keywords: 'Rhode Island bakery, bakery Rhode Island, RI bakery, Portuguese bakery RI, Mexican pan dulce Cranston, Malassadas Rhode Island, Nossa Casa Bakery, Conchas West Warwick, Cottage Bakery RI, Portuguese pastries, Mexican bread Rhode Island',
   authors: [{ name: 'Ty Santos & Natasha' }],
   openGraph: {
-    title: 'Nossa Casa Bakery - Sabor & Tradição',
-    description: 'Family-owned Portuguese & Mexican infused bakery in Rhode Island. Pre-order authentic pastries made with love.',
+    title: 'Nossa Casa Bakery - Rhode Island Bakery for Portuguese & Mexican Pastries',
+    description: 'Family-owned Rhode Island bakery offering Portuguese and Mexican pastries by pre-order. Freshly baked sweet breads available across RI.',
     url: 'https://nossacasabakery.com',
     siteName: 'Nossa Casa Bakery',
     locale: 'en_US',
@@ -85,6 +86,7 @@ export default function RootLayout({
       </head>
       <body className={`${playfair.variable} ${inter.variable} font-sans antialiased`}>
         <Providers>
+          <Preloader />
           {children}
         </Providers>
         {process.env.NODE_ENV === 'production' && <Analytics />}

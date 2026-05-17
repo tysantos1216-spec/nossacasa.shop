@@ -50,12 +50,25 @@ export function Footer() {
         <div className="my-8 h-px bg-primary-foreground/20" />
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/70">
-          <p>© {new Date().getFullYear()} Nossa Casa Bakery. All rights reserved.</p>
-          <p>Made with ❤️ in Rhode Island</p>
-          <div className="flex gap-4 text-2xl">
-            <span>🇵🇹</span>
-            <span>🇲🇽</span>
+        <div className="flex flex-col gap-4 text-sm text-primary-foreground/70">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p>© {new Date().getFullYear()} Nossa Casa Bakery. All rights reserved.</p>
+            <p>Made with ❤️ in Rhode Island</p>
+            <div className="flex gap-4 text-2xl">
+              <span>🇵🇹</span>
+              <span>🇲🇽</span>
+            </div>
+          </div>
+
+          <div className="bakery-footer bg-transparent text-primary-foreground/70 rounded-xl border border-primary-foreground/10 p-4">
+            <div className="footer-content space-y-3">
+              <p className="legal-disclosure text-xs font-medium">
+                <strong>NOTICE:</strong> Made by a Cottage Food Business Registrant that is not Subject to Routine Government Food Safety Inspection.
+              </p>
+              <p className="bakery-copyright text-xs">
+                © 2026 Nossa Casa Bakery | Proudly serving Cranston, Providence, & West Warwick, RI
+              </p>
+            </div>
           </div>
         </div>
       </div>
