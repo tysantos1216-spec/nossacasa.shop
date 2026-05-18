@@ -1,6 +1,6 @@
 "use client"
 
-import { useLanguage } from '@/lib/language-context'
+import { useLanguage } from 
 import { ShoppingCart, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 

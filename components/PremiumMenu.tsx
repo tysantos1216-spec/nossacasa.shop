@@ -8,7 +8,7 @@ interface BakeryItem {
   badge?: string
 }
 
-import Image from 'next/image'
+
 
 const MENU_ITEMS: BakeryItem[] = [
   {
@@ -63,14 +63,7 @@ export default function PremiumMenu() {
 
             <div>
               <div className="h-64 bg-stone-100 relative overflow-hidden">
-                <Image
-                  src={item.imagePath}
-                  alt={item.name}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority={false}
-                />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
               </div>
 
