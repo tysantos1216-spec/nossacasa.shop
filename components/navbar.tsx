@@ -1,7 +1,5 @@
 "use client"
 
-import Link from 'next/link'
-import Image from 'next/image'
 import { useLanguage } from '@/lib/language-context'
 import { useCart } from '@/lib/cart-context'
 import { ShoppingCart, Menu, X } from 'lucide-react'
@@ -18,19 +16,19 @@ export function Navbar() {
     { href: '/how-it-works', label: t.nav.howItWorks },
   ]
 
+  // Fallback Link component for environments where 'next/link' isn't available
+  const Link: any = ({ href, children, className, onClick, ...props }: any) => (
+    <a href={href} className={className} onClick={onClick} {...props}>
+      {children}
+    </a>
+  )
+
   return (
     <nav className="sticky top-0 z-40 bg-primary text-primary-foreground shadow-lg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image
-              src="/images/logo.jpg"
-              alt="Nossa Casa Bakery"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
             <span className="font-bold text-lg tracking-wider hidden sm:block">NOSSA CASA</span>
           </Link>
 

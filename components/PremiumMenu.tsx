@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 interface BakeryItem {
   id: string
   name: string
@@ -12,23 +10,23 @@ interface BakeryItem {
 
 const MENU_ITEMS: BakeryItem[] = [
   {
-    id: 'bolos-levedos',
-    name: 'Classic Bolos Lêvedos',
+    id: 'azorean chocolate cookies',
+    name: 'azorean chocolate cookies',
     heritage: 'Portuguese',
     description:
-      'Authentic Azorean sweet muffins, toasted on a traditional stone griddle. Perfectly fluffy.',
+      'Authentic Azorean chocolate cookies, baked to perfection with traditional ingredients.',
     pricePerDozen: 24.0,
-    imagePath: '/menu/bolos.jpg',
+    
     badge: 'Best Seller',
   },
   {
     id: 'conchas',
-    name: 'Artisan Conchas',
+    name: 'Conchas',
     heritage: 'Mexican',
     description:
       'Traditional pan dulce topped with a crisp, beautifully patterned sweet shell crusted sugar topping.',
     pricePerDozen: 22.0,
-    imagePath: '/menu/conchas.jpg',
+    
     badge: 'Fresh Batch',
   },
 ]

@@ -1,18 +1,15 @@
 "use client"
 
-import { useLanguage } from '@/lib/language-context'
 import { Phone, Instagram, Mail } from 'lucide-react'
 
 export function Footer() {
-  const { t } = useLanguage()
-
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="max-w-4xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-lg mb-4">{t.footer.contact}</h3>
+            <h3 className="font-bold text-lg mb-4">Contact</h3>
             <div className="space-y-3">
               <a
                 href="tel:+14017531024"
@@ -33,7 +30,7 @@ export function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="font-bold text-lg mb-4">{t.footer.followUs}</h3>
+            <h3 className="font-bold text-lg mb-4">Follow Us</h3>
             <a
               href="https://instagram.com/nossacasa.bakery"
               target="_blank"
