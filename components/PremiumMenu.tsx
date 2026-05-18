@@ -8,6 +8,8 @@ interface BakeryItem {
   badge?: string
 }
 
+import Image from 'next/image'
+
 const MENU_ITEMS: BakeryItem[] = [
   {
     id: 'azorean chocolate cookies',
@@ -16,7 +18,7 @@ const MENU_ITEMS: BakeryItem[] = [
     description:
       'Authentic Azorean chocolate cookies, baked to perfection with traditional ingredients.',
     pricePerDozen: 24.0,
-    
+    imagePath: '/images/azorean-cookies.jpg',
     badge: 'Best Seller',
   },
   {
@@ -26,7 +28,7 @@ const MENU_ITEMS: BakeryItem[] = [
     description:
       'Traditional pan dulce topped with a crisp, beautifully patterned sweet shell crusted sugar topping.',
     pricePerDozen: 22.0,
-    
+    imagePath: '/images/conchas.jpg',
     badge: 'Fresh Batch',
   },
 ]

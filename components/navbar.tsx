@@ -1,13 +1,12 @@
 "use client"
 
 import { useLanguage } from '@/lib/language-context'
-import { useCart } from '@/lib/cart-context'
 import { ShoppingCart, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
 export function Navbar() {
   const { t } = useLanguage()
-  const { itemCount } = useCart()
+  const itemCount = 0
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navLinks = [
