@@ -231,8 +231,8 @@ export const menuItems: MenuItem[] = [
     descriptionPt: 'Água Mineral Portuguesa',
     descriptionEs: 'Agua Mineral Portuguesa',
     price: 2.00,
-    sixPackPrice: 6.00,
-    twelvePackPrice: 12.00,
+    sixPackPrice: 4.00,
+    twelvePackPrice: 8.00,
     category: 'drinks',
     status: 'available'
   },
@@ -244,9 +244,9 @@ export const menuItems: MenuItem[] = [
     description: 'Portuguese apple juice ',
     descriptionPt: 'Sumo de Maçã Português',
     descriptionEs: 'Zumo de Manzana Portugués',
-    price: 2.00,
+    price: 3.00,
     category: 'drinks',
-    status: 'available'
+    status: 'available' 
   },
   {
     id: 'sumol',
